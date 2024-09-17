@@ -12,6 +12,7 @@ connectDB();
 
 //setup middlewares
 app.use(express.json());
+app.use(cookieParser);
 
 //set up routes
 app.use("/api/rooms", roomRoutes);
