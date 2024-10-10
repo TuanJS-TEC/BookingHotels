@@ -1,12 +1,12 @@
 const { Router } = require ("express");
 
-// const {
-//     getRooms,
-//     createRoom,
-//     updateRooms,
-//     deleteRoom,
-// } = require("../controllers/roomController");
-// const { auth } = require("../middleware/authMiddletware");
+const {
+    getRooms,
+    createRoom,
+    updateRooms,
+    deleteRoom,
+} = require("../controllers/roomController");
+const { auth } = require("../middleware/authMiddletware");
 
 const router = Router();
 
