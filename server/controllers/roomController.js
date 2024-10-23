@@ -39,7 +39,7 @@ const createRoom = async(req,res,next) => {
                 res.status(400);
                 throw new Error("room not found");
             }
-
+            
             return res.status(200).json(room);
         }catch(error){
             next(error);
