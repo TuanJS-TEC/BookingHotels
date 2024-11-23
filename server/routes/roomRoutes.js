@@ -10,12 +10,19 @@ const { auth } = require("../middleware/authMiddletware");
 
 const router = Router();
 
+//get all router
 router.get("/",getRooms);
 
-// router.post("/",);
+//create room
+router.get("/",auth,createRoom);
 
-router.get("/",(req,res)=>{
-    return res.json({mesage:"get room"});
-})
+//get single room
+router.post("/",getRoom);
+
+//update room
+router.put("/:id", auth,updateRoom);
+
+//delete room
+router.delete(":/id",auth,deleteRoom);
 
 module.exports = router;
